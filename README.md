@@ -3,15 +3,16 @@
 Using Mui auto complete to setup pluggable auto complete component.
 
 # instaltion 
-    ` npm i autocomplete-with-api --save`
+
+```bash
+npm i autocomplete-with-api --save
+```
 
 # How to use 
 
-`
-    import React from 'react';
-    import AutoCompleteWithApi, {OptionProps} from "./lib/AutoCompleteWithApi";
-    import {Box, Typography} from "@mui/material";
 
+```tsx
+    import React from 'react';
 
     async function search(input: string): Promise<OptionProps[]> {
         return listToSearch.filter(t => t.value.toLowerCase().includes(input.toLowerCase()));
@@ -28,8 +29,8 @@ Using Mui auto complete to setup pluggable auto complete component.
             </div>
         );
     }
-    
+
     export default App;
-`
+ ```
 
 
