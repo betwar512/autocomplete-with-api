@@ -7,11 +7,10 @@
   "main": "dist/index.js",
   "module": "dist/index.d.ts",
   "source": "src/lib/index.tsx",
-  "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "@googlemaps/js-api-loader": "^1.12.12",
+    "@googlemaps/js-api-loader": "^1.14.2",
     "@mui/material": "^5.7.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
@@ -32,7 +31,7 @@
     "@mui/icons-material": "^5.6.2",
     "@types/autosuggest-highlight": "^3.2.0",
     "@types/googlemaps": "^3.43.3",
-    "@types/lodash": "^4.14.178",
+    "@types/lodash": "^4.14.182",
     "tsup": "^5.12.7"
   },
   "tsup": {
@@ -47,6 +46,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "buildlib": "rm -rf dist && tsup --dts",
+    "public": "npm run buildlib && npm publish",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
