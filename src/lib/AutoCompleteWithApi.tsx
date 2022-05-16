@@ -52,7 +52,7 @@ const AutoCompleteWithApi: FC<AutoCompleteWithApiProps> = (props) => {
            setLoading(false)
         })
 
-    }, [value, inputValue, loading ])
+    }, [value, inputValue, loading ,props])
 
 
     return (

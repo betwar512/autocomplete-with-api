@@ -1,6 +1,7 @@
 import React from 'react';
 import AutoCompleteWithApi, {OptionProps} from "./lib/AutoCompleteWithApi";
 import Box from "@mui/material/Box";
+import {ACAddress} from "./lib";
 
 
 const listToSearch: OptionProps[] = [{id: "1", value: "First"}, {id: "2", value: "Second"}, {
@@ -22,6 +23,16 @@ function App() {
                 <h4>Search now </h4>
                 <AutoCompleteWithApi onSearch={search} id={"search-field"} selectedOption={undefined}/>
             </Box>
+
+            <Box p={5} m={5}>
+                <ACAddress  googleApiConfig={{
+                    apiKey: "",
+                    version: "weekly",
+                    libraries: ["places","geometry"],
+                    region:"AU"
+                }} onChange={address=>console.log(address)}/>
+            </Box>
+
         </div>
     );
 }
