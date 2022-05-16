@@ -1,6 +1,6 @@
 {
   "name": "autocomplete-with-api",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "author": "betwar512",
   "license": "MIT",
   "repository": "https://github.com/betwar512/autocomplete-with-api.git",
@@ -46,7 +46,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "buildlib": "rm -rf dist && tsup --dts",
-    "public": "npm run buildlib && npm publish",
+    "publishLib": "npm run buildlib && npm publish",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -67,5 +67,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "files": ["dist/*.js","dist/*.ts", "dist/**/&.js"]
 }
